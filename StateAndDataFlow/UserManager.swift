@@ -5,9 +5,14 @@
 //  Created by Alexey Efimov on 31.03.2021.
 //
 
-import Combine
+import SwiftUI
 
 class UserManager: ObservableObject {
-    @Published var isRegister = false
-    var name = ""
+    @AppStorage("isRegistered") var isRegistered: Bool = false {
+       willSet {
+            self.objectWillChange.send()
+       }
+    }
+    
+    @AppStorage("username") var username: String = ""
 }

@@ -12,20 +12,28 @@ struct RegisterView: View {
     @State private var name = ""
     
     var body: some View {
-        VStack {
-            TextField("Enter your name", text: $name)
-                .multilineTextAlignment(.center)
-            Button(action: registerUser) {
-                Image(systemName: "checkmark.circle")
-                Text("Ok")
+        ZStack {
+            // Добавил фон чтобы .onTapGesture срабатывал в любом месте экрана
+            Color(.white)
+                .ignoresSafeArea()
+            VStack {
+                TextField("Enter your name", text: $name)
+                    .multilineTextAlignment(.center)
+                Button(action: registerUser) {
+                    Image(systemName: "checkmark.circle")
+                    Text("Ok")
+                }
             }
+        }
+        .onTapGesture {
+            UIApplication.shared.endEditing()
         }
     }
     
     private func registerUser() {
         if !name.isEmpty {
-            user.name = name
-            user.isRegister.toggle()
+            user.username = name
+            user.isRegistered.toggle()
         }
     }
 }
