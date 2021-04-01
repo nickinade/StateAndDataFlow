@@ -1,5 +1,5 @@
 //
-//  ActionButton.swift
+//  ActionButtonView.swift
 //  StateAndDataFlow
 //
 //  Created by Nikita Benin on 01.04.2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ActionButton: View {
+struct ActionButtonView: View {
     
     let title: String
     let backgroundColor: Color
@@ -30,8 +30,8 @@ struct ActionButton: View {
     }
 }
 
-struct ActionButton_Previews: PreviewProvider {
+struct ActionButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ActionButton(title: "Test", backgroundColor: .red, action: {})
+        ActionButtonView(title: "Test", backgroundColor: .red, action: {})
     }
 }

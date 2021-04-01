@@ -23,11 +23,7 @@ struct ContentView: View {
             TimerButtonView()
                 .environmentObject(timer)
             Spacer()
-            ActionButton(
-                title: "LogOut",
-                backgroundColor: .blue,
-                action: { user.isRegistered = false }
-            )
+            LogoutButtonView()
         }
     }
 }
@@ -36,17 +32,5 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(UserManager())
-    }
-}
-
-struct TimerButtonView: View {
-    @EnvironmentObject var timer: TimeCounter
-    
-    var body: some View {
-        ActionButton(
-            title: "\(timer.buttonTitle)",
-            backgroundColor: .red,
-            action: { timer.startTimer() }
-        )
     }
 }
