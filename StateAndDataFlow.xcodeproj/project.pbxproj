@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		870621492616038500A8C01B /* TimerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870621482616038500A8C01B /* TimerButtonView.swift */; };
 		8706214E2616049600A8C01B /* LogoutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8706214D2616049600A8C01B /* LogoutButtonView.swift */; };
+		876950332618D0110030C6B5 /* ColoredTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876950322618D0110030C6B5 /* ColoredTextView.swift */; };
+		876950372618D1490030C6B5 /* RegisterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876950362618D1490030C6B5 /* RegisterButtonView.swift */; };
+		8769503A2618D2910030C6B5 /* NameTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876950392618D2910030C6B5 /* NameTextFieldView.swift */; };
 		8787CC582615CEE400B48FB4 /* ActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8787CC572615CEE400B48FB4 /* ActionButtonView.swift */; };
 		A87D1F482614ECD800B9ADC0 /* StateAndDataFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87D1F472614ECD800B9ADC0 /* StateAndDataFlowApp.swift */; };
 		A87D1F4A2614ECD800B9ADC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87D1F492614ECD800B9ADC0 /* ContentView.swift */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		870621482616038500A8C01B /* TimerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonView.swift; sourceTree = "<group>"; };
 		8706214D2616049600A8C01B /* LogoutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutButtonView.swift; sourceTree = "<group>"; };
+		876950322618D0110030C6B5 /* ColoredTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredTextView.swift; sourceTree = "<group>"; };
+		876950362618D1490030C6B5 /* RegisterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButtonView.swift; sourceTree = "<group>"; };
+		876950392618D2910030C6B5 /* NameTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextFieldView.swift; sourceTree = "<group>"; };
 		8787CC572615CEE400B48FB4 /* ActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonView.swift; sourceTree = "<group>"; };
 		A87D1F442614ECD800B9ADC0 /* StateAndDataFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateAndDataFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A87D1F472614ECD800B9ADC0 /* StateAndDataFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAndDataFlowApp.swift; sourceTree = "<group>"; };
@@ -53,6 +59,7 @@
 				8787CC572615CEE400B48FB4 /* ActionButtonView.swift */,
 				870621482616038500A8C01B /* TimerButtonView.swift */,
 				8706214D2616049600A8C01B /* LogoutButtonView.swift */,
+				876950362618D1490030C6B5 /* RegisterButtonView.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -76,6 +83,16 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
+		876950312618CFE30030C6B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				870621502616055300A8C01B /* Buttons */,
+				876950322618D0110030C6B5 /* ColoredTextView.swift */,
+				876950392618D2910030C6B5 /* NameTextFieldView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A87D1F3B2614ECD800B9ADC0 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +112,8 @@
 		A87D1F462614ECD800B9ADC0 /* StateAndDataFlow */ = {
 			isa = PBXGroup;
 			children = (
+				876950312618CFE30030C6B5 /* Views */,
 				A87D1F472614ECD800B9ADC0 /* StateAndDataFlowApp.swift */,
-				870621502616055300A8C01B /* Buttons */,
 				87062152261605DD00A8C01B /* Screens */,
 				870621532616061200A8C01B /* Objects */,
 				A87D1F4B2614ECDC00B9ADC0 /* Assets.xcassets */,
@@ -187,9 +204,12 @@
 				A87D1F4A2614ECD800B9ADC0 /* ContentView.swift in Sources */,
 				A88B3FF02614FC41007A756A /* RegisterView.swift in Sources */,
 				8706214E2616049600A8C01B /* LogoutButtonView.swift in Sources */,
+				876950332618D0110030C6B5 /* ColoredTextView.swift in Sources */,
+				876950372618D1490030C6B5 /* RegisterButtonView.swift in Sources */,
 				A88B3FF62614FEF6007A756A /* StarterView.swift in Sources */,
 				A87D1F582614F61400B9ADC0 /* TimeCounter.swift in Sources */,
 				A88B3FF32614FD39007A756A /* UserManager.swift in Sources */,
+				8769503A2618D2910030C6B5 /* NameTextFieldView.swift in Sources */,
 				A87D1F482614ECD800B9ADC0 /* StateAndDataFlowApp.swift in Sources */,
 				8787CC582615CEE400B48FB4 /* ActionButtonView.swift in Sources */,
 			);

@@ -10,39 +10,31 @@ import SwiftUI
 struct RegisterView: View {
     @EnvironmentObject var user: UserManager
     @State private var name = ""
-    
     @State private var numberOfSymbols: Int = 0
     @State private var labelColor: Color = .red
     
     var body: some View {
         ZStack {
             // Добавил фон чтобы .onTapGesture срабатывал в любом месте экрана
-            Color(.white)
+            Color(.clear)
                 .ignoresSafeArea()
             VStack (spacing: 12) {
                 HStack {
                     Spacer()
                         .frame(width: 60)
-                    TextField("Type your name", text: $name)
-                        .multilineTextAlignment(.center)
-                        .onChange(of: name, perform: validateTextField)
-                    Text("\(numberOfSymbols)")
-                        .multilineTextAlignment(.leading)
-                        .foregroundColor(labelColor)
-                        .frame(width: 60)
+                    NameTextFieldView(name: $name, action: validateTextField)
+                    ColoredTextView(numberOfSymbols: numberOfSymbols, color: labelColor)
                 }
-                Button(action: registerUser) {
-                    Image(systemName: "checkmark.circle")
-                    Text("OK")
-                }
-                .disabled(numberOfSymbols < 3)
+                RegisterButtonView(numberOfSymbols: numberOfSymbols, action: registerUser)
             }
         }
         .onTapGesture {
             UIApplication.shared.endEditing()
         }
     }
-    
+}
+
+extension RegisterView {
     private func validateTextField(value: String) {
         numberOfSymbols = value.count
         if numberOfSymbols < 3 {
